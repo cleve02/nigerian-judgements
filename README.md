@@ -1,6 +1,6 @@
 # Functionality
 The scraper currently scrapes all cases in the first page of the supreme court cases list
-
+`scrapy crawl ng`
 
 # The Database
 ![alt text](https://github.com/cleve02/nigerian-judgements/blob/master/db_model.jpg)
