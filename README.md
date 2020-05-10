@@ -1,14 +1,44 @@
-# nigerian-judgements
-Scraper project to extract case details from the official government website
+# The Database
 
-To start the scraper run <code>scrapy crawl judgements</code> from the command line
+## cases
 
-By default this scraper extracts the first case in the "Banking & Finance" section titled "3PLR – A.C.B. LTD. V. BABAYEMI (HC) – Judgements"
+ - **url** = TextField `url to the summary page of the judgement`
+ - **name** =  TextField `full case name`
+ - **name_abbreviation** =  CharField `
+ - **suite_no** =  CharField 
+ - **decision_date** =  DateField `formatted date text`
+ - **citations** =  TextField
+ - **court** =  CharField `currently defaults to "Supreme Court of Nigeria" `
+ - **full_judgement** =  TextField 
+ - **appellants** =  TextField `each appellant is in a new line`
+ - **respondents** =  TextField `each respondent is in a new line`
+ - **full_html** =  TextField `full html of the case page incase you need further parsing`
 
-You can customize the category and case number you want to scrape by editing the <code>nigeria.py</code> file to your liking
+## opinions
 
-Don't forget to install dependancies as they are prompted
+ - **case_id** =  ForeignKeyField
+ - **author** =  TextField
+ - **text** = TextField
 
-Results can be viewed on <code>https://helloworld-4c1b2.web.app/</code> for every case crawled (Added at the bottom of the table - Make sure to refresh the page first) 
+## ratio_decidendi
 
-Happy Scraping!
+ - **case_id** =  ForeignKeyField
+ - **matter** =  CharField
+ - **topic** =  CharField
+ - **text** = TextField
+ - **author_ref** = TextField `author & reference`
+
+## judges
+
+ - **case_id** =  ForeignKeyField
+ - **name** =  TextField
+ - **title** = TextField
+
+## attorneys
+
+ - **case_id** =  ForeignKeyField
+ - **name** =  TextField
+ - **representing** = TextField `either "Appellant(s)" or "Respondent(s)"` 
+ 
+
+ 
