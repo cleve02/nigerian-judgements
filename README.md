@@ -1,3 +1,7 @@
+# Functionality
+The scraper currently scrapes all cases in the first page of the supreme court cases list
+
+
 # The Database
 ![alt text](https://github.com/cleve02/nigerian-judgements/blob/master/db_model.jpg)
 ## cases
@@ -41,4 +45,7 @@
  - **representing** = TextField `either "Appellant(s)" or "Respondent(s)"` 
  
 
- 
+ # Pending Issues
+ - prefect.io flow
+ - Self sufficiency with the spider
+
