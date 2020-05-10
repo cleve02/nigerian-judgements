@@ -1,5 +1,5 @@
 # The Database
-
+![alt text](https://github.com/cleve02/nigerian-judgements/blob/master/db_model.jpg)
 ## cases
 
  - **url** = TextField `url to the summary page of the judgement`
